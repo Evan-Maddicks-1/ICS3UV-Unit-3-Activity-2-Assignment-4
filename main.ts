@@ -4,8 +4,6 @@
 * @date 2025-11-18
 * @fileoverview this program calculates the interest of a bank every year for ten years
 */
-//number of years
-const year = 10;
 
 // ask for the starting amount and interest rate
 const startInput = prompt("Enter the initial amount of money:");
