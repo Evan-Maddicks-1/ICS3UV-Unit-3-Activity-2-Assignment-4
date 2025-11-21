@@ -5,19 +5,19 @@
 * @fileoverview this program calculates the interest of a bank every year for ten years
 */
 //number of years
-const YEARS = 10;
+const year = 10;
 
 // ask for the starting amount and interest rate
 const startInput = prompt("Enter the initial amount of money:");
 const rateInput = prompt("Enter the yearly interest rate (example: 7 for 7%):");
 
 //user input to numbers
-const START_AMOUNT = Number(startInput);
-const RATE = Number(rateInput) / 100;
+const baseAmount = Number(startInput);
+const rate = Number(rateInput) / 100;
 
 //function calculates total value per year
 function valueAfterYears(year: number): number {
-  return START_AMOUNT * Math.pow(1 + RATE, year);
+  return baseAmount * Math.pow(1 + rate, year);
 }
 
 //function calculates interest per year
@@ -36,7 +36,7 @@ console.log("Year    Initial Value    Interest Gained    Current Value");
 //year 1
 console.log(
   "1       $" +
-  formatMoney(START_AMOUNT) +
+  formatMoney(baseAmount) +
   "            $" +
   formatMoney(interestForYear(1)) +
   "            $" +
@@ -46,7 +46,7 @@ console.log(
 // year 2
 console.log(
   "2       $" +
-  formatMoney(START_AMOUNT) +
+  formatMoney(baseAmount) +
   "            $" +
   formatMoney(interestForYear(2)) +
   "            $" +
@@ -56,7 +56,7 @@ console.log(
 // year 3
 console.log(
   "3       $" +
-  formatMoney(START_AMOUNT) +
+  formatMoney(baseAmount) +
   "            $" +
   formatMoney(interestForYear(3)) +
   "            $" +
@@ -66,7 +66,7 @@ console.log(
 // year 4
 console.log(
   "4       $" +
-  formatMoney(START_AMOUNT) +
+  formatMoney(baseAmount) +
   "            $" +
   formatMoney(interestForYear(4)) +
   "            $" +
@@ -76,7 +76,7 @@ console.log(
 //year 5
 console.log(
   "5       $" +
-  formatMoney(START_AMOUNT) +
+  formatMoney(baseAmount) +
   "            $" +
   formatMoney(interestForYear(5)) +
   "            $" +
@@ -86,7 +86,7 @@ console.log(
 //year 6
 console.log(
   "6       $" +
-  formatMoney(START_AMOUNT) +
+  formatMoney(baseAmount) +
   "            $" +
   formatMoney(interestForYear(6)) +
   "            $" +
@@ -96,7 +96,7 @@ console.log(
 //year 7
 console.log(
   "7       $" +
-  formatMoney(START_AMOUNT) +
+  formatMoney(baseAmount) +
   "            $" +
   formatMoney(interestForYear(7)) +
   "            $" +
@@ -106,7 +106,7 @@ console.log(
 //year 8
 console.log(
   "8       $" +
-  formatMoney(START_AMOUNT) +
+  formatMoney(baseAmount) +
   "            $" +
   formatMoney(interestForYear(8)) +
   "            $" +
@@ -116,7 +116,7 @@ console.log(
 //year 9
 console.log(
   "9       $" +
-  formatMoney(START_AMOUNT) +
+  formatMoney(baseAmount) +
   "            $" +
   formatMoney(interestForYear(9)) +
   "            $" +
@@ -126,7 +126,7 @@ console.log(
 //year 10
 console.log(
   "10      $" +
-  formatMoney(START_AMOUNT) +
+  formatMoney(baseAmount) +
   "            $" +
   formatMoney(interestForYear(10)) +
   "            $" +
